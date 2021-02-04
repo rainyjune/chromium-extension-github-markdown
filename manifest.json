@@ -1,0 +1,15 @@
+{
+  "name": "GitHub Markdown Helper",
+  "version": "1.0",
+  "description": "Write markdown document more easily on GitHub!",
+  "manifest_version": 2,
+  "web_accessible_resources": ["script.js"],
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "run_at": "document_end",
+      "css": ["github-markdown.css"],
+      "js": ["github-markdown.js"]
+    }
+  ]
+}
