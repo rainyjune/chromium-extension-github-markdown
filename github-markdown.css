@@ -4,9 +4,6 @@
 
 .chromium-extension-github-markdown-toolbar button {
   margin-right: 8px !important;
-  width: 25px;
-  padding-left: initial;
-  padding-right: initial;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  min-width: 25px;
+  padding: 5px;
 }
