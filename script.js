@@ -6,6 +6,22 @@
 
   if (!breadcrumb) return false;
 
+  // Bind Key Maps
+
+  setTimeout(() => {
+    const editor = document.querySelector('.CodeMirror').CodeMirror;
+
+    editor.addKeyMap({
+      'Cmd-B': function(cm) {
+        cm.replaceSelection(`**${getSelection()}**`);
+      },
+      'Cmd-I': function(cm) {
+        cm.replaceSelection(`*${getSelection()}*`);
+      }
+    });
+  }, 0);
+
+
   // We use the default styles for button
   var buttonClass = 'btn flex-auto mx-3 ml-md-3 mr-md-0 ml-lg-0 mb-3 mb-md-0';
 
